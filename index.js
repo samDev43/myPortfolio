@@ -3,6 +3,7 @@ const section1img = document.querySelector('.section1-img');
 let navDisplay2 = document.querySelector(".nav-display2");
 let smNav = document.querySelector(".sm-nav");
 let navItems = document.querySelector(".nav-items");
+let contactSection = document.querySelector(".contact-section");
 
 navDisplay1.addEventListener('click', function(){
       navDisplay1.classList.add("hidden");
@@ -44,35 +45,37 @@ document.addEventListener('DOMContentLoaded', () => {
   homeProject.forEach(projectPage =>{
     console.log(projectPage);
     
-    projectPage.classList.remove("opacity-0", "translate-y-10", "translate-x-10")
-        projectPage.classList.add("opacity-100", "translate-y-0", "translate-x-0")
+    projectPage.classList.remove("opacity-0", "translate-x-[10rem]")
+        projectPage.classList.add("opacity-100", "translate-x-[10rem]")
 section1img
   })
 })
 
 
-// Smooth scrolling for anchor links
 document.addEventListener('DOMContentLoaded', () => {
-  // Create the observer with a 30% threshold
   let observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('opacity-100', 'translate-y-0');
-        entry.target.classList.remove('opacity-0', 'translate-y-20');
+        entry.target.classList.remove('opacity-0', 'translate-x-[10rem]');
+        entry.target.classList.add('opacity-100', 'translate-x-0');
       } else {
-        entry.target.classList.remove('opacity-100', 'translate-y-0');
-        entry.target.classList.add('opacity-0', 'translate-y-20');
+        entry.target.classList.remove('opacity-100', 'translate-x-0');
+     entry.target.classList.add('opacity-0', 'translate-x-[10rem]');
       }
     });
   }, {
-    threshold: 0.3   // ← 0.3 = 30% of the element’s area is visible
+    threshold: 0.2
   });
 
   let homeProject = document.querySelectorAll('.home-project');
   homeProject.forEach(projectPage => {
+    console.log(projectPage);
+    
     observer.observe(projectPage);
   });
       observer.observe(document.querySelector('.section1-txt'));
+
+
 });
 
 
@@ -83,15 +86,31 @@ document.addEventListener('DOMContentLoaded', () => {
     
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-       section1img.classList.remove('opacity-0', 'translate-x-[20rem]');
+       section1img.classList.remove('opacity-0', 'translate-x-[10rem]');
   section1img.classList.add('opacity-100', 'translate-x-0');
       } else {
-         section1img.classList.add('opacity-0', 'translate-x-[20rem]');
+         section1img.classList.add('opacity-0', 'translate-x-[10rem]');
   section1img.classList.remove('opacity-100', 'translate-x-0');
       }
     });
   }, {
-    threshold: 0.3   // ← 0.3 = 30% of the element’s area is visible
+    threshold: 0.4 
   });
       observer.observe(document.querySelector('.section1-img'));
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  let observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting){
+      contactSection.classList.remove('translate-x-[-10rem]', 'opacity-0');
+      contactSection.classList.add('translate-x-0', 'opacity-100');
+    }else{
+      contactSection.classList.add('translate-x-[-10rem]', 'opacity-0');
+      contactSection.classList.remove('translate-x-0', 'opacity-100');
+    }
+  }, {
+    threshold: 0.3
+  });
+   observer.observe(contactSection);
 });
