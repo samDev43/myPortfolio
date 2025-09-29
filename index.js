@@ -29,7 +29,7 @@ navDisplay2.addEventListener('click', function(){
     
   }, 100)
 });
-window.addEventListener('load', ()=>{
+window.addEventListener('DOMContentLoaded', ()=>{
   document.querySelector('.section1-txt').classList.remove('opacity-0', 'translate-y-20')
 })
  
@@ -69,12 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let homeProject = document.querySelectorAll('.home-project');
   homeProject.forEach(projectPage => {
-    console.log(projectPage);
     
     observer.observe(projectPage);
   });
       observer.observe(document.querySelector('.section1-txt'));
-
 
 });
 
@@ -99,18 +97,76 @@ document.addEventListener('DOMContentLoaded', () => {
       observer.observe(document.querySelector('.section1-img'));
 });
 
+document.addEventListener('DOMContentLoaded', ()=>{
+  let observer = new IntersectionObserver(entries =>{
+    entries.forEach(entry =>{
+       document.querySelectorAll('.skill-card').forEach(card =>{
+   if (entry.isIntersecting){        
+        card.classList.remove('translate-x-[-10rem]', 'opacity-0');
+        card.classList.add('translate-x-0', 'opacity-100');
+      }else{
+        card.classList.add('translate-x-[-10rem]', 'opacity-0');
+        card.classList.remove('translate-x-0', 'opacity-100');
+      }
+     })
+    })
+  },{
+        threshold: 0.3
+  }
+  )
+     document.querySelectorAll('.skill-card').forEach(card =>{
+            observer.observe(card);
+
+     })
+});
 
 document.addEventListener('DOMContentLoaded', () => {
   let observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting){
-      contactSection.classList.remove('translate-x-[-10rem]', 'opacity-0');
-      contactSection.classList.add('translate-x-0', 'opacity-100');
-    }else{
-      contactSection.classList.add('translate-x-[-10rem]', 'opacity-0');
-      contactSection.classList.remove('translate-x-0', 'opacity-100');
-    }
+    entries.forEach(entry =>{
+      console.log(entry);
+      
+      if (entry.isIntersecting){
+        console.log(contactSection);
+        
+        contactSection.classList.remove('translate-x-[-10rem]', 'opacity-0');
+        contactSection.classList.add('translate-x-0', 'opacity-100');
+      }else{
+        contactSection.classList.add('translate-x-[-10rem]', 'opacity-0');
+        contactSection.classList.remove('translate-x-0', 'opacity-100');
+      }
+
+    })
   }, {
     threshold: 0.3
   });
    observer.observe(contactSection);
 });
+
+let currentHtml = document.querySelector('.index.html')
+let aboutMeHtml = document.querySelector('.aboutMe.html')
+let projectsHtml = document.querySelector('.projects.html')
+console.log(aboutMeHtml);
+
+if(currentHtml){
+  page = currentHtml;
+}else if(aboutMeHtml){
+  page = aboutMeHtml;
+}else if(projectsHtml){
+  page = projectsHtml;
+}
+
+switch(page){
+  case currentHtml:
+    document.querySelector('.home').classList.add('concurrent');
+        document.querySelector('.home').classList.remove('nav-item');
+
+
+  case aboutMeHtml:
+    document.querySelector('.aboutMe').classList.add('concurrent');
+            document.querySelector('.aboutMe').classList.remove('nav-item');
+
+  case projectsHtml:
+    document.querySelector('.projects').classList.add('concurrent');
+            document.querySelector('.projects').classList.remove('nav-item');
+
+}
