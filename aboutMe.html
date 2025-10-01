@@ -83,11 +83,11 @@
 
     </nav>
 
-    <nav class="hidden side-nav   relative md:block">
+    <nav class="hidden side-nav   relative lg:block">
         <div class=" fixed flex justify-top h-screen">
-            <div class="bg-[#282c33] w-[2px] h-[20rem] fixed top-0  ml-[5rem] z-30"></div>
-        <div class=" fixed left-[4rem] top-[22rem] text-white z-30">
-               <div class="flex flex-col space-y-6 text-3xl  z-50">
+            <div class="bg-[#282c33] w-[2px] h-[20rem] fixed top-0  ml-[5rem] z-[100]"></div>
+        <div class=" fixed left-[4rem] top-[22rem] text-white z-[100]">
+               <div class="flex flex-col space-y-6 text-3xl  z-[100]">
                     <i class="bi bi-facebook hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
                     <i class="bi bi-twitter hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
                     <i class="bi bi-linkedin hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
@@ -101,20 +101,10 @@
     </nav>
 
     <div class="about-me.html"></div>
-    <!-- <section class="mt-32 mb-20md:w-[80%] lg:w-[60%] mx-auto w-full min-h-screen flex flex-col items-center justify-center bg-[#1e1e1e] rounded-lg shadow-lg p-8">
-        <div class="text-4xl font-bold text-white mb-10">About Me</div>
-        <div class="text-lg text-gray-300 leading-relaxed">
-            <p>Hello! I'm Samad, a passionate web developer with a knack for creating beautiful and functional websites. With a strong foundation in HTML, CSS, and JavaScript, I enjoy bringing ideas to life in the digital world.</p>
-            <br>
-            <p>When I'm not coding, you can find me exploring new technologies, reading tech blogs, or working on personal projects to enhance my skills. I'm always eager to learn and take on new challenges.</p>
-            <br>
-            <p>Feel free to connect with me on social media or check out my projects to see what I've been working on!</p>
-        </div>
 
-    </section> -->
   <section  class="w-full bg-[#111827]">
-      <section>
-        <div class="flex flex-col md:flex-row  justify-between items-center md:w-[98%] lg:w-[80%] mx-auto pt-[15rem] pb-[10rem] text-gray-100">
+      <section class="">
+        <div class=" z-[200] bg-[#111827] flex flex-col md:flex-row  justify-between items-center md:w-[98%] lg:w-[80%] mx-auto pt-[15rem] pb-[10rem] text-gray-100">
             <div class="w-[95%] pb-5 md:pb-0 md:w-[60%] space-y-4">
                 <h1 class="text-4xl font-bold ">About Me</h1>
                <p class="text-2xl" style="font-family:__Merriweather_c1c8fb, __Merriweather_Fallback_c1c8fb;" >
@@ -139,7 +129,7 @@
                </p>
             </div>
             <div>
-            <img src="./imgs/Image.png" alt="">
+            <img src="./imgs/Image2.png" alt="">
             </div>
         </div>
 
@@ -152,10 +142,10 @@
             </div>
 
             <!-- Skills Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 overflow-hidden">
                 
                 <!-- Frontend Development -->
-                <div class="section1-img opacity-0 translate-x-[10rem] transition-all duration-1000 ease-out skill-card bg-gray-800 rounded-lg p-8 border border-gray-700">
+                <div class="section1-img opacity-0 translate-x-[10rem] transition-all duration-1000 ease-out skill-card bg-gray-800 rounded-lg p-8 border border-gray-700 ">
                     <div class="flex items-center mb-6">
                         <i class="bi bi-code-slash text-4xl text-[#bc73d1] mr-4"></i>
                         <h3 class="text-2xl font-bold text-white">Frontend Development</h3>
@@ -281,9 +271,64 @@
                     </p>
                     <p class="text-gray-400">Advanced web security techniques, full-stack development, and penetration testing methodologies</p>
                 </div>
+                <div>
+
+                </div>
             </div>
         </div>
     </section>
+    <!-- Certificates Section -->
+<section class="w-full bg-[#111827] py-20">
+    <div class="w-[90%] lg:w-[80%] mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-[#db97e7] mb-4">Certifications</h2>
+            <p class="text-gray-400 text-lg">Professional achievements and credentials</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Certificate Card 1 -->
+            <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-[#bc73d1] transition-all duration-300 hover:transform hover:scale-105">
+                <div class="flex items-center mb-4">
+                    <i class="bi bi-award text-3xl text-[#bc73d1] mr-3"></i>
+                    <h3 class="text-xl font-bold text-white">Cybersecurity</h3>
+                </div>
+                <p class="text-gray-400 mb-4">Ethical Hacking & Penetration Testing</p>
+                <button onclick="window.open('path-to-certificate.pdf', '_blank')" class="w-full bg-gradient-to-r from-[#bc73d1] to-[#f0b8ff] hover:from-[#d892e3] hover:to-[#bc73d1] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                    <i class="bi bi-eye"></i>
+                    View Certificate
+                </button>
+            </div>
+
+            <!-- Certificate Card 2 -->
+            <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-[#bc73d1] transition-all duration-300 hover:transform hover:scale-105">
+                <div class="flex items-center mb-4">
+                    <i class="bi bi-shield-lock text-3xl text-[#bc73d1] mr-3"></i>
+                    <h3 class="text-xl font-bold text-white">Cybersecurity</h3>
+                </div>
+                <p class="text-gray-400 mb-4">Ethical Hacking & Penetration Testing</p>
+                <button onclick="window.open('path-to-certificate.pdf', '_blank')" class="w-full bg-gradient-to-r from-[#bc73d1] to-[#f0b8ff] hover:from-[#d892e3] hover:to-[#bc73d1] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                    <i class="bi bi-eye"></i>
+                    View Certificate
+                </button>
+            </div>
+
+            <!-- Certificate Card 3 -->
+            <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-[#bc73d1] transition-all duration-300 hover:transform hover:scale-105">
+                <div class="flex items-center mb-4">
+                    <i class="bi bi-shield-lock text-3xl text-[#bc73d1] mr-3"></i>
+                    <h3 class="text-xl font-bold text-white">Cybersecurity</h3>
+                </div>
+                <p class="text-gray-400 mb-4">Ethical Hacking & Penetration Testing</p>
+                <button onclick="foragecertificate()" class="w-full bg-gradient-to-r from-[#bc73d1] to-[#f0b8ff] hover:from-[#d892e3] hover:to-[#bc73d1] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                    <i class="bi bi-eye"></i>
+                    View Certificate
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
         <div>
 
         </div>
@@ -293,7 +338,7 @@
             <div class="flex flex-col items-center md:items-start">
                 <p class="text-2xl font-bold gradient-text mono">samad.dev</p>
                 <p class="text-lg text-gray-400">Cybersecurity Professional</p>
-                <p class="text-sm text-gray-500 mt-1">Building secure digital solutions</p>
+                <p class="text-gray-400 mb-4">Ethical Hacking & Penetration Testing</p>
             </div>
             
             <div class="flex flex-col items-center gap-2">
