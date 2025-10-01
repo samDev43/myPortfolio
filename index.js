@@ -37,7 +37,7 @@ let testProjects = [
     title: "Currency Converter",
     description: "This is a test project description.",
     img: "./imgs/image.png",
-    tech: ["HTML", "CSS", "JavaScript"],
+    tech: ["HTML", "tailwindcss", "JavaScript"],
     liveLink: "https://samdev43.github.io/fist_curency-converter/",
     gitLink: "#"
   },
@@ -48,6 +48,14 @@ let testProjects = [
     tech: ["HTML", "CSS", "JavaScript"],
     liveLink: "https://samdev43.github.io/second_rechargeCard_generator2-/",
     gitLink: "https://github.com/samDev43/second_rechargeCard_generator2-"
+  },
+  {
+    title: "Calculator",
+    description: "",
+    img: "./imgs/Screenshot From 2025-10-01 14-16-04.png",
+    tech: ["HTML", "CSS", "JavaScript"],
+    liveLink: " https://samdev43.github.io/first-calculator/",
+    gitLink: "https://github.com/samDev43/first-calculator"
   }
 ];
 let observer;
@@ -146,7 +154,7 @@ if(document.querySelector('.section1-img')){
       }
     });
   }, {
-    threshold: 0.4 
+    threshold: 0.3
   });
 
   // Select ALL .section1-img elements and observe them
