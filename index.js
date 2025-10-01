@@ -48,7 +48,7 @@ let testProjects = [
     tech: ["HTML", "CSS", "JavaScript"],
     liveLink: "https://samdev43.github.io/second_rechargeCard_generator2-/",
     gitLink: "https://github.com/samDev43/second_rechargeCard_generator2-"
-  },
+  }, 
   {
     title: "Calculator",
     description: "",
@@ -57,6 +57,16 @@ let testProjects = [
     liveLink: " https://samdev43.github.io/first-calculator/",
     gitLink: "https://github.com/samDev43/first-calculator"
   }
+];
+let cybersecurityPorject = [
+  {
+    title: "Vulnerability Assessment of a Web Application",
+    description: "Conducted a comprehensive vulnerability assessment of a web application using tools like OWASP ZAP and Burp Suite. Identified and documented security flaws, provided remediation recommendations, and improved the overall security posture of the application.",
+    img: "./imgs/cybersecurity1.png",
+    tech: ["OWASP ZAP", "Burp Suite", "Web Security"],
+    liveLink: "#",
+    gitLink: "#"
+  },
 ];
 let observer;
 const section1img = document.querySelector('.section1-img');
@@ -154,7 +164,7 @@ if(document.querySelector('.section1-img')){
       }
     });
   }, {
-    threshold: 0.3
+    threshold: 0.2
   });
 
   // Select ALL .section1-img elements and observe them
@@ -216,10 +226,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   displayWork('portfolioWork'); 
 });
-
+let display;
 function displayWork(type) {
-  let display = type === 'portfolioWork' ? portfolioWork : testProjects;
-
+  // let display = type === 'portfolioWork' ? portfolioWork : testProjects;
+   if(type == 'portfolioWork'){
+    display = portfolioWork;
+   }else if(type == 'testProjects'){
+    display = testProjects;
+   }else{
+    display = cybersecurityPorject;
+   }
   const container = document.querySelector(".display");
   container.innerHTML = '';
 
