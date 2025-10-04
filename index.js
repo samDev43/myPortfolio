@@ -81,23 +81,17 @@ navDisplay1.addEventListener('click', function(){
       navDisplay2.classList.remove("hidden");
       smNav.classList.remove("hidden");
 
-      requestAnimationFrame(() => {
-          smNav.classList.remove('opacity-0', 'scale-90');
-          smNav.classList.add('opacity-100', 'scale-100');
-      });
+          smNav.classList.remove('opacity-0', 'translate-y-[20]');
+          smNav.classList.add('opacity-100', 'translate-y-0');
 });
 navDisplay2.addEventListener('click', function(){
-  smNav.classList.remove('opacity-100', 'scale-100');
-  smNav.classList.add('opacity-5', 'scale-90');
+
 
   setTimeout(() => {
-    smNav.classList.remove('opacity-5', 'scale-90');
+    smNav.classList.remove('opacity-0', 'translate-y-[20]');
     navDisplay2.classList.add("hidden");
-    smNav.classList.add('opacity-0', 'scale-90');
     navDisplay1.classList.remove("hidden");
-    smNav.classList.add("hidden");
-    console.log(smNav);
-    
+    smNav.classList.add("hidden");    
   }, 100)
 });
 if(document.querySelector('.section1-txt')){
