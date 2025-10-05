@@ -11,109 +11,139 @@
 <link href="https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet"></head>
 </head> 
 
-<style>
-    
 
-</style>
 <body>
-<div class="relative w-full h-[65%]">
-  <!-- Left side (gray) -->
-  <div class="hidden md:block absolute inset-0 bg-gray-500 clip-left"></div>
-
-  <!-- Right side (black) -->
-  <div class="hidden md:block absolute inset-0 bg-[#111827] clip-right"></div>
-  <div class="smclip-top  z-10 md:hidden  absolute inset-0 bg-[#111827]"></div>
-  <div class="smclip-bottom  z-30 md:hidden absolute inset-0 bg-gray-600/85"></div>
-
-  <nav class="bg-gray-600/85 fixed  top-0 left-0 right-0 z-40  rounded-b-lg border-b-[2px] border-white">
-    <div class="flex justify-between items-center  md:flex  lg:w-[70%] w-[100%] mx-auto px-4 rounded-b-lg  py-[2rem] ">
-      <div class="font-bold text-white md:text-black  text-4xl"><P>Samad.dev</P></div>
-      <div>
-     <ul  class="hidden md:flex gap-10 text-[1.2rem] font-[500] text-white z-60 font-semibold">
-         <li class="nav-item concurrent">  <a  href="./index.html">Home</a></li>
-        <li class="nav-item">   <a href="./aboutMe.html">About</a></li>
-       <li class="nav-item"> <a href="./projects.html">Projects</a></li>
-     </ul>
-      </div>
-      <div class="md:hidden">
-           <button class="nav-display1 text-white focus:outline-none">
+    
+    <nav class=" bg-gray-800 backdrop-blur-90xl  w-[100%]  fixed top-0 left-0 right-0 rounded-b-lg shadow-lg z-50">
+        <div class="flex justify-between items-center py-8 bg-gray-800 text-white w-[90%]  md:w-[80%] lg:w-[50%] mx-auto ">
+            <div class="text-lg font-bold bg-gradient-to-r from-[#bc73d1] via-[#d892e3] to-[#f0b8ff]
+           bg-clip-text text-transparent  text-4xl">Samad</div>
+            <div class="hidden md:flex items-center space-x-4">
+                <ul class="flex space-x-4 text-white font-bold">
+                    <li class="nav-item concurrent home relative hover:bg-pink-500/15">
+                        <a href="./index.html" class="flex justify-center gap-1 align-items py-2 px-4">
+                            <span class="hash-symbol text-[#bc73d1]">#</span>
+                            <span class=" hover:text-[#f271b5] transition-all duration-300">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item relative hover:bg-pink-500/15 ">
+                        <a href="./aboutMe.html" class="flex justify-center gap-1 align-items py-2 px-4">
+                            <span class="hash-symbol text-[#bc73d1]">#</span>
+                            <span class="hover:text-[#f271b5] transition-all duration-300">About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item relative hover:bg-pink-500/15 ">
+                        <a href="./projects.html" class="flex justify-center gap-1 align-items py-2 px-4">
+                            <span class="hash-symbol text-[#bc73d1]">#</span>
+                            <span class="hover:text-[#f271b5] transition-all duration-300">Projects</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        <div class="md:hidden">
+                <button class="nav-display1 text-white focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
-            </button>
-
-           
-      </div>
-    </div>
-  </nav>
-
-
-  <nav >
-    <div class="sm-nav hidden  md:hidden opacity-0 translate-y-[-30px] duration-1000 fixed  bg-gray-900 top-0 right-0 left-0 bottom-[40rem] z-50">
-      <div class="absolute right-9 bottom-[14rem] ">
-         <button class="hidden nav-display2 text-white focus:outline-none">
+                </button>
+               <button class="hidden nav-display2 text-white focus:outline-none">
                 <i class="text-2xl bi bi-x-lg"></i>
-            </button>
-      </div>
-       <div class="w-full h-full flex justify-center items-center flex-col px-3 gap-5 text-white font-semibold">
-           <a class="nav-item concurrent" href="">Home</a>
-           <a class="nav-item " href="">About</a>
-           <a class="nav-item " href="">Project</a>
-       </div>
-    </div>
-  </nav>
-  <!-- Content (goes on top) -->
-  <div class="md:w-[95%] lg:w-[70%] mx-auto hidden md:flex relative z-10   md:flex-row items-center justify-between md:h-full">
-    <div class="w-[40%] -500 text-gray-300 space-y-4  section1-txt opacity-0 translate-y-20 transition-all duration-1000 ease-in-out">
-      <p class="font-bold  text-4xl"><span style="font-family:'inter', serif;" class="">Hi</span>, 
-                <span style="font-family:'Times New Roman', serif;" class=" ">I’m</span>
-        </p>
-              <p class=" text-4xl md:text-5xl lg:text-6xl font-heading">
-                <span >S</span>ooto 
-                <span >S</span>amad
-              </p>
-              <p class="z-50 w-[100%] text-lg md:text-xl lg:text-xl font-semibold text-gray-300  top-[150%] md:top-[40%]">
-                <span>Cybersecurity Enthusiast</span> 🔐 | <span>Web Developer</span> 💻
-              </p>
-            
-    </div>
-    <div class="pt-[5rem] md:pt-0 md:w-[40%]">
-      <img class="section1-img opacity-0 translate-x-[10rem] transition-all duration-1000 ease-out z-[200px]" src="./imgs/Image2.png" alt="">
-    </div>
-    </div>
-    <div class="relative md:hidden w-full z-20 ">
-       <img class="w-full h-full z-20" src="./imgs/Image2.png" alt="">
-    </div>
-    <div class="md:hidden absolute bottom-8 left-8 z-50 text-white">
-                 <p class="text-sm mb-2">Hi, I am</p>
-                 <h1 class="text-4xl font-bold mb-2">Sooto Samad</h1>
-                 <p class="text-sm">Cybersecurity Enthusiast / Web Developer</p>
-    </div>
-    <div class="flex flex-col gap-2 absolute bottom-4 right-8 z-50 text-white md:hidden text-2xl">
-        <i class="bi bi-facebook hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
-        <i class="bi bi-twitter hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
-        <i class="bi bi-linkedin hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
-        <i class="bi bi-github hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
-        <i class="bi bi-instagram hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
-    </div>
-</div>
+                </button>
+        </div>
+        </div>   
+        
+      
 
+        </div>
+    </nav>
 
-<div class="h-[35%] bg-[#1f2937] flex justify-center items-center">
-   <div class="text-center lg:w-[60%]">
-     <p class="text-white text-lg font-heading">
+    <nav>
+        <div class=" sm-nav md:hidden fixed bg-gray-900 top-[10rem] w-[90%] shadow-xl bottom-[500px] rounded-lg shadow-lg z-50 transition-all duration-300 ease-out opacity-0 scale-95">
+            <ul class="flex flex-col space-y-4 text-white font-bold text-center mt-10">
+                <li class="nav-item relative hover:bg-pink-500/15">
+                    <a href="./index.html" class="flex justify-center gap-1 align-items py-2 px-4">
+                        <span class="hash-symbol text-[#bc73d1]">#</span>
+                        <span class="hover:text-[#f271b5] transition-all duration-300">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item relative hover:bg-pink-500/15">
+                    <a href="./aboutMe.html" class="flex justify-center gap-1 align-items py-2 px-4">
+                        <span class="hash-symbol text-[#bc73d1]">#</span>
+                        <span class="hover:text-[#f271b5] transition-all duration-300">About</span>
+                    </a>
+                </li>
+                <li class="nav-item relative hover:bg-pink-500/15">
+                    <a href="./projects.html" class="flex justify-center gap-1 align-items py-2 px-4">
+                        <span class="hash-symbol text-[#bc73d1]">#</span>
+                        <span class="hover:text-[#f271b5] transition-all duration-300">Projects</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <nav class="hidden side-nav   relative md:block">
+        <div class=" fixed flex justify-top h-screen">
+            <div class="bg-[#282c33] w-[2px] h-[20rem] fixed top-0  ml-[5rem] z-30"></div>
+        <div class=" fixed left-[4rem] top-[22rem] text-white z-30">
+               <div class="flex flex-col space-y-6 text-3xl  z-50">
+                    <i class="bi bi-facebook hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
+                    <i class="bi bi-twitter hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
+                    <i class="bi bi-linkedin hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
+                    <i class="bi bi-github hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
+                    <i class="bi bi-instagram hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
+               </div>
+
+        </div>
+        </div>   
+        
+    </nav>
+     <div class="home.html"></div>
+    <section class="relative -mt-32 bg-[#111827] pt-[20rem] pb-[9rem] z-60">
+  <div class="flex flex-col md:flex-row justify-between items-center pt-7 md:gap-[2rem] lg:gap-[2rem] mx-auto w-[95%] md:w-[100%] lg:w-[90%]">
+
+    <!-- TEXT -->
+    <div class="md:w-[50%]">
+      <div class="overflow-hidden"> <!-- wrapper with hidden overflow -->
+        <div class="section1-txt flex items-center opacity-0 translate-y-20 transition-all duration-1000 ease-in-out">
+          <div class="text-left mx-auto w-full px-4 md:px-3 py-4 space-y-[1rem]">
+            <p><span style="font-family:'Times New Roman', serif;" class="text-[#bc73d1] text-4xl md:text-5xl lg:text-6xl font-heading">Hi</span>, 
+               <span style="font-family:'Times New Roman', serif;" class="text-white text-4xl md:text-5xl lg:text-6xl">I’m</span>
+            </p>
+            <p style="font-family:'Times New Roman', serif;" class="text-white text-4xl md:text-5xl lg:text-6xl font-heading">
+              <span class="bg-gradient-to-r from-[#bc73d1] via-[#d892e3] to-[#f0b8ff] bg-clip-text text-transparent">S</span>ooto 
+              <span class="bg-gradient-to-r from-[#bc73d1] via-[#d892e3] to-[#f0b8ff] bg-clip-text text-transparent">S</span>amad
+            </p>
+            <p class="text-white text-xl md:text-2xl lg:text-3xl font-heading">
+              <span>Cybersecurity Enthusiast</span> 🔐 | <span>Web Developer</span> 💻
+            </p>
+            <p class="text-white text-lg font-heading">
               <span>Crafting Responsive Magic</span> 🎨 | <span>Fortifying the Web</span> 🛡️ | 
               <span>Turning Creative Ideas into Interactive Reality</span> 💡 | 
               <span>Building Beautiful & Secure Digital Experiences</span> 🌐 
               <a href=""><i class="bi bi-instagram"></i></a>
             </p>
-             <div class="flex flex-col md:flex-row gap-4 text-lg font-semibold justify-center items-center md:space-x-4 w-full">
-              <button class="py-2 px-6 w-[80%] md:w-[14rem] rounded-full mt-4 text-black hover:scale-[120%] bg-white" 
+            <div class="flex flex-col md:flex-row gap-4 text-lg font-semibold justify-start items-center md:space-x-4 w-full">
+              <button class="py-2 px-6 w-[80%] md:w-[14rem] rounded-full mt-4 text-white hover:scale-[120%] transition-all duration-300 bg-gradient-to-r from-[#bc73d1] via-[#d892e3] to-[#f0b8ff]" 
                 onclick="window.location.href='https://samdev43.github.io/myPortfolio/projects.html'">View my work</button>
-              <button class="py-2 px-6 w-[80%] md:w-[14rem] rounded-full mt-4 text-black hover:scale-[120%] transition-all duration-300 bg-white ">Hire me</button>
+              <button class="py-2 px-6 w-[80%] md:w-[14rem] rounded-full mt-4 text-white hover:scale-[120%] transition-all duration-300 bg-gradient-to-r from-[#bc73d1] via-[#d892e3] to-[#f0b8ff]">Hire me</button>
             </div>
-   </div>
-</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="md:w-[50%] flex items-center justify-center px-3 pt-6 md:pt-0">
+      <div class="bg-gray-800 w-full rounded flex justify-center items-center z-30 overflow-hidden">
+        <img class="section1-img opacity-0 translate-x-[10rem] transition-all duration-1000 ease-out z-40 w-full h-full object-contain" 
+             src="./imgs/Image2.png" alt="">
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
      <section class="bg-[#111827] pt-[5rem] pb-[10rem] z-60">

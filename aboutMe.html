@@ -10,78 +10,43 @@
 </head>
 <body>
     
-  <nav class=" bg-gray-800 backdrop-blur-90xl  w-[100%]  fixed top-0 left-0 right-0 rounded-b-lg shadow-lg z-50">
-        <div class="flex justify-between items-center py-8 bg-gray-800 text-white w-[90%]  md:w-[80%] lg:w-[60%] mx-auto ">
-            <div class="text-lg font-bold bg-gradient-to-r from-[#bc73d1] via-[#d892e3] to-[#f0b8ff]
-           bg-clip-text text-transparent  text-4xl">Samad</div>
-            <div class="hidden md:flex items-center space-x-4">
-                <ul class="flex space-x-4 text-white font-bold">
-                    <li class="nav-item   relative hover:bg-pink-500/15 ">
-                        <a href="./index.html" class="flex justify-center gap-1 align-items py-2 px-4">
-                            <span class="hash-symbol text-[#bc73d1]">#</span>
-                            <span class=" hover:text-[#f271b5] transition-all duration-300">Home</span>
-                        </a>
-                    </li>
-                    <li class="nav-item concurrent home  relative hover:bg-pink-500/15 ">
-                        <a href="./aboutMe.html" class="flex justify-center gap-1 align-items py-2 px-4">
-                            <span class="hash-symbol text-[#bc73d1]">#</span>
-                            <span class="hover:text-[#f271b5] transition-all duration-300">About</span>
-                        </a>
-                    </li>
-                    <li class="nav-item relative hover:bg-pink-500/15">
-                        <a href="./projects.html" class="flex justify-center gap-1 align-items  py-2 px-4">
-                            <span class="hash-symbol text-[#bc73d1]">#</span>
-                            <span class="hover:text-[#f271b5] transition-all duration-300">Projects</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        <div class="md:hidden">
-                <button class="nav-display1 text-white focus:outline-none">
+<nav class="bg-gray-600/85 fixed  top-0 left-0 right-0 z-40  rounded-b-lg border-b-[2px] border-white">
+    <div class="flex justify-between items-center  md:flex  lg:w-[70%] w-[100%] mx-auto px-4 rounded-b-lg  py-[2rem] ">
+      <div class="font-bold text-white md:text-black  text-4xl"><P>Samad.dev</P></div>
+      <div>
+     <ul  class="hidden md:flex gap-10 text-[1.2rem] font-[500] text-white z-60 font-semibold">
+         <li class="nav-item ">  <a  href="./index.html">Home</a></li>
+        <li class="nav-item concurrent">   <a href="./aboutMe.html">About</a></li>
+       <li class="nav-item"> <a href="./projects.html">Projects</a></li>
+     </ul>
+      </div>
+      <div class="md:hidden">
+           <button class="nav-display1 text-white focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
-                </button>
-               <button class="hidden nav-display2 text-white focus:outline-none">
+            </button>
+
+           
+      </div>
+    </div>
+  </nav>
+
+
+  <nav >
+    <div class="sm-nav hidden  md:hidden opacity-0 translate-y-[-30px] duration-1000 fixed  bg-gray-900 top-0 right-0 left-0 bottom-[40rem] z-50">
+      <div class="absolute right-9 bottom-[14rem] ">
+         <button class="hidden nav-display2 text-white focus:outline-none">
                 <i class="text-2xl bi bi-x-lg"></i>
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" class="text-7xl text-white"
-                        fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                    </svg> -->
-                </button>
-        </div>
-        </div>   
-        
-      
-
-        </div>
-    </nav>
-
-    <nav>
-        <div class=" sm-nav md:hidden fixed bg-gray-900 top-[10rem] w-[90%] shadow-xl bottom-[500px] rounded-lg shadow-lg z-50 transition-all duration-300 ease-out opacity-0 scale-95">
-            <ul class="flex flex-col space-y-4 text-white font-bold text-center mt-10">
-                <li class="nav-item relative hover:bg-pink-500/15 ">
-                    <a href="./index.html" class="flex justify-center gap-1 align-items py-2 px-4">
-                        <span class="hash-symbol text-[#bc73d1]">#</span>
-                        <span class="hover:text-[#f271b5] transition-all duration-300">Home</span>
-                    </a>
-                </li>
-                <li class="nav-item relative hover:bg-pink-500/15">
-                    <a href="./aboutMe.html" class="flex justify-center gap-1 align-items py-2 px-4">
-                        <span class="hash-symbol text-[#bc73d1]">#</span>
-                        <span class="hover:text-[#f271b5] transition-all duration-300">About</span>
-                    </a>
-                </li>
-                <li class="nav-item relative hover:bg-pink-500/15">
-                    <a href="./projects.html" class="flex justify-center gap-1 align-items  py-2 px-4">
-                        <span class="hash-symbol text-[#bc73d1]">#</span>
-                        <span class="hover:text-[#f271b5] transition-all duration-300">Projects</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-    </nav>
+            </button>
+      </div>
+       <div class="w-full h-full flex justify-center items-center flex-col px-3 gap-5 text-white font-semibold">
+           <a class="nav-item " href="./index.html">Home</a>
+           <a class="nav-item concurrent" href="./aboutMe.html">About</a>
+           <a class="nav-item " href="./projects.html">Project</a>
+       </div>
+    </div>
+  </nav>
 
     <nav class="hidden side-nav   relative lg:block">
         <div class=" fixed flex justify-top h-screen">

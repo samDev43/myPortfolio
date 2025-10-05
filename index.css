@@ -7,10 +7,10 @@
 
 
         /* Trigger rotation when hovering the list item or the anchor */
-        .nav-item:hover .hash-symbol,
+        /* .nav-item:hover .hash-symbol,
         .nav-item a:hover .hash-symbol {
             transform: rotate(180deg);
-        }
+        } */
 
         .nav-item::after{
             content: '';
@@ -19,7 +19,8 @@
             left: 50%;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, #ec4899, #f97316);
+            /* background: linear-gradient(90deg, #ec4899, #f97316); */
+            background: white;
             transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             transform: translateX(-50%);
         }
@@ -30,8 +31,8 @@
             color: #ec4899;
         }
         .nav-item:hover{
-            background: rgba(236, 72, 153, 0.1);
-            color: #ec4899;
+            /* background: rgba(236, 72, 153, 0.1); */
+            color: white;
             transform: translateY(-2px);
         }
 
@@ -43,7 +44,8 @@
             left: 50%;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, #ec4899, #f97316);
+            /* background: linear-gradient(90deg, #ec4899, #f97316); */
+            background:white;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             transform: translateX(-50%);
         }
@@ -54,7 +56,30 @@
             color: #ec4899;
         }
         .concurrent{
-            background: rgba(236, 72, 153, 0.1);
-            color: #ec4899;
+            /* background: rgba(236, 72, 153, 0.1); */
+            color: white;
             transform: translateY(-2px);
         }
+
+         .clip-left {
+        clip-path: polygon(0 0, 60% 0, 40% 100%, 0% 100%);
+        }
+
+        .clip-right {
+        clip-path: polygon(59% 0, 100% 0, 100% 100%, 40% 100%);
+        }
+
+        .smclip-top {
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 0 55%);
+        }
+
+        .smclip-bottom {
+            clip-path: polygon(0 55%, 100% 70%, 100% 100%, 0 100%);
+        }
+
+        /* Ensure the background image covers properly */
+        /* .bg-portrait {
+            background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1200&fit=crop');
+            background-size: cover;
+            background-position: center;
+        } */

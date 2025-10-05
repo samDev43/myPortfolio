@@ -80,15 +80,18 @@ navDisplay1.addEventListener('click', function(){
       navDisplay1.classList.add("hidden");
       navDisplay2.classList.remove("hidden");
       smNav.classList.remove("hidden");
+      setTimeout(()=>{
+        smNav.classList.remove('opacity-0', 'translate-y-[-30px]');
+        smNav.classList.add('opacity-100', 'translate-y-0');
 
-          smNav.classList.remove('opacity-0', 'translate-y-[20]');
-          smNav.classList.add('opacity-100', 'translate-y-0');
+      },100)
 });
 navDisplay2.addEventListener('click', function(){
 
 
   setTimeout(() => {
-    smNav.classList.remove('opacity-0', 'translate-y-[20]');
+     smNav.classList.remove('opacity-100', 'translate-y-0');
+    smNav.classList.add('opacity-0', 'translate-y-[-30px]');
     navDisplay2.classList.add("hidden");
     navDisplay1.classList.remove("hidden");
     smNav.classList.add("hidden");    
