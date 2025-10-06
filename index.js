@@ -243,7 +243,7 @@ function displayWork(type) {
     container.insertAdjacentHTML('beforeend', `
      <div class="home-project skill-card translate-x-[-10rem] opacity-0 transition-all duration-1000 bg-transparent border-[0.1px] border-gray-200 shadow-md hover:scale-95 transition-all duration-300">
         <div class="w-full">
-          <img class="w-full h-[16rem] md:h-[15rem] lg:h-[19rem]" src="${projectPage.img}" alt="">
+          <img class="w-full h-[12rem] md:h-[16rem] md:h-[15rem] lg:h-[19rem]" src="${projectPage.img}" alt="">
         </div>
         <div class="flex gap-2 mb-2 my-2 py-2 px-2 font-bold border-b-[0.1px] border-t-[0.1px] border-gray-200 text-gray-300 flex-wrap">
           ${techStack}

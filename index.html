@@ -27,13 +27,20 @@
 
   <nav class="bg-gray-600/85 fixed  top-0 left-0 right-0 z-40  rounded-b-lg border-b-[2px] border-white">
     <div class="flex justify-between items-center  md:flex  lg:w-[70%] w-[100%] mx-auto px-4 rounded-b-lg  py-[2rem] ">
-      <div class="font-bold text-white md:text-black  text-4xl"><P>Samad.dev</P></div>
-      <div>
-     <ul  class="hidden md:flex gap-10 text-[1.2rem] font-[500] text-white z-60 font-semibold">
-         <li class="nav-item concurrent">  <a  href="./index.html">Home</a></li>
-        <li class="nav-item">   <a href="./aboutMe.html">About</a></li>
-       <li class="nav-item"> <a href="./projects.html">Projects</a></li>
-     </ul>
+        <div class="font-bold text-3xl md:text-4xl flex items-center gap-3 group cursor-pointer">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#bc73d1] to-[#ef517f] rounded-xl flex items-center justify-center shadow-lg group-hover:rotate-12 transition-transform duration-300">
+                <span class="text-white text-2xl font-black">S</span>
+            </div>
+            <p class="bg-gradient-to-r from-[#bc73d1] via-[#ef517f] to-[#f0b8ff] bg-clip-text text-transparent group-hover:tracking-wider transition-all duration-300">
+                Samad.dev
+            </p>
+        </div>      
+    <div>
+        <ul  class="hidden md:flex gap-10 text-[1.2rem] font-[500] text-white z-60 font-semibold">
+            <li class="nav-item concurrent">  <a  href="./index.html">Home</a></li>
+            <li class="nav-item">   <a href="./aboutMe.html">About</a></li>
+        <li class="nav-item"> <a href="./projects.html">Projects</a></li>
+        </ul>
       </div>
       <div class="md:hidden">
            <button class="nav-display1 text-white focus:outline-none">
@@ -56,27 +63,41 @@
             </button>
       </div>
        <div class="w-full h-full flex justify-center items-center flex-col px-3 gap-5 text-white font-semibold">
-           <a class="nav-item concurrent" href="">Home</a>
-           <a class="nav-item " href="">About</a>
-           <a class="nav-item " href="">Project</a>
+           <a class="nav-item concurrent" href="./index.html">Home</a>
+           <a class="nav-item " href="./aboutMe.html">About</a>
+           <a class="nav-item " href="./projects.html">Project</a>
        </div>
     </div>
   </nav>
   <!-- Content (goes on top) -->
   <div class="md:w-[95%] lg:w-[70%] mx-auto hidden md:flex relative z-10   md:flex-row items-center justify-between md:h-full">
-    <div class="w-[40%] -500 text-gray-300 space-y-4  section1-txt opacity-0 translate-y-20 transition-all duration-1000 ease-in-out">
-      <p class="font-bold  text-4xl"><span style="font-family:'inter', serif;" class="">Hi</span>, 
-                <span style="font-family:'Times New Roman', serif;" class=" ">I’m</span>
+   <div class="w-[90%] md:w-[40%] text-gray-300 space-y-6 section1-txt opacity-0 translate-y-20 transition-all duration-1000 ease-in-out">
+    <p class="font-bold text-3xl md:text-4xl tracking-wide">
+        <span style="font-family:'inter', serif;" class="text-gray0">Hi</span><span class="text-[#bc73d1]">,</span> 
+        <span style="font-family:'Times New Roman', serif;" class="text-white neon-text-subtle">I'm</span>
+    </p>
+    
+    <h1 class="text-5xl md:text-6xl lg:text-7xl font-black font-heading leading-none">
+        <span class="block text-white neon-text-name drop-shadow-2xl">
+            Sooto Samad
+        </span>
+    </h1>
+    
+    <div class="space-y-2">
+        <p class="text-lg md:text-xl lg:text-2xl font-bold flex items-center gap-3 flex-wrap">
+            <span class="inline-flex items-center gap-2 text-[#bc73d1] neon-glow-soft">
+                <i class="bi bi-shield-lock-fill text-2xl"></i>
+                Cybersecurity Enthusiast
+            </span>
         </p>
-              <p class=" text-4xl md:text-5xl lg:text-6xl font-heading">
-                <span >S</span>ooto 
-                <span >S</span>amad
-              </p>
-              <p class="z-50 w-[100%] text-lg md:text-xl lg:text-xl font-semibold text-gray-300  top-[150%] md:top-[40%]">
-                <span>Cybersecurity Enthusiast</span> 🔐 | <span>Web Developer</span> 💻
-              </p>
-            
+        <p class="text-lg md:text-xl lg:text-2xl font-bold flex items-center gap-3 flex-wrap">
+            <span class="inline-flex items-center gap-2 text-[#d892e3] neon-glow-soft">
+                <i class="bi bi-code-slash text-2xl"></i>
+                Web Developer
+            </span>
+        </p>
     </div>
+</div>
     <div class="pt-[5rem] md:pt-0 md:w-[40%]">
       <img class="section1-img opacity-0 translate-x-[10rem] transition-all duration-1000 ease-out z-[200px]" src="./imgs/Image2.png" alt="">
     </div>
@@ -100,34 +121,44 @@
 
 
 <div class="h-[35%] bg-[#1f2937] flex justify-center items-center">
-   <div class="text-center lg:w-[60%]">
+   <div class="text-center md:w-[40%]">
      <p class="text-white text-lg font-heading">
               <span>Crafting Responsive Magic</span> 🎨 | <span>Fortifying the Web</span> 🛡️ | 
               <span>Turning Creative Ideas into Interactive Reality</span> 💡 | 
               <span>Building Beautiful & Secure Digital Experiences</span> 🌐 
               <a href=""><i class="bi bi-instagram"></i></a>
             </p>
-             <div class="flex flex-col md:flex-row gap-4 text-lg font-semibold justify-center items-center md:space-x-4 w-full">
-              <button class="py-2 px-6 w-[80%] md:w-[14rem] rounded-full mt-4 text-black hover:scale-[120%] bg-white" 
-                onclick="window.location.href='https://samdev43.github.io/myPortfolio/projects.html'">View my work</button>
-              <button class="py-2 px-6 w-[80%] md:w-[14rem] rounded-full mt-4 text-black hover:scale-[120%] transition-all duration-300 bg-white ">Hire me</button>
-            </div>
+         <div class="flex flex-col md:flex-row gap-4 text-lg font-semibold justify-center items-center md:space-x-4 w-full">
+            <button class="btn-animated py-2 px-6 w-[80%] md:w-[14rem] rounded-full mt-4 text-black bg-white relative overflow-hidden transition-all duration-300 hover:scale-110 group" 
+                onclick="window.location.href='https://samdev43.github.io/myPortfolio/projects.html'">
+                <span class="relative z-10 flex items-center justify-center gap-2">
+                View my work
+                <i class="bi bi-arrow-right transform transition-transform duration-300 group-hover:translate-x-2"></i>
+                </span>
+            </button>
+            <button class="btn-animated py-2 px-6 w-[80%] md:w-[14rem] rounded-full mt-4 text-black bg-white relative overflow-hidden transition-all duration-300 hover:scale-110 group" style="animation-delay: 0.5s;">
+                <span class="relative z-10 flex items-center justify-center gap-2">
+                Hire me
+                <i class="bi bi-briefcase transform transition-transform duration-300 group-hover:rotate-12"></i>
+                </span>
+            </button>
+        </div>
    </div>
 </div>
 
 
      <section class="bg-[#111827] pt-[5rem] pb-[10rem] z-60">
-        <div class="z-60 flex justify-between items-center pt-7  gap-[9rem] mx-auto w-[95%] md:w-[88%] lg:w-[80%]">
+        <div class="z-60 flex justify-between items-center pt-7  gap-[1rem] md:gap-[8rem] mx-auto w-[95%] md:w-[88%] lg:w-[80%]">
             <div class="text-white w-[80%] flex justify- items-center gap-4">
-                <p class="text-2xl font-bold"><span class="text-[#bc73d1]">#</span>projects</p>
+                <p class="text:text-lg md:text-2xl font-bold"><span class="text-[#bc73d1]">#</span>projects</p>
                 <div class="h-[2px] w-[100%] bg-[#bc73d1]"></div>
             </div>
-            <div class="text-white text-xl w-[200px] font-semibold flex  justify-center items-center gap-3"  onclick="window.location.href='./projects.html'"><button>View all</button> <p>></p ></div>
+            <div class="text-white text:text-lg md:text-xl w-[200px] font-semibold flex  justify-center items-center gap-3"  onclick="window.location.href='./projects.html'"><button>View all</button> <p>></p ></div>
         </div>
         <section class="bg-[#111827] overflow-hidden">
             <div class="pt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-10 mx-auto w-[80%] md:w-[88%] lg:w-[80%] pt-[9rem]">
                 <div class="home-project opacity-0 transition-all translate-x-[10rem]  p-4 bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-1000">
-                    <img class="w-full h-48 object-cover" src="./imgs/image-copy.png" alt="Project 1">
+                    <img class="w-full h-40 md:h-48 object-cover" src="./imgs/image-copy.png" alt="Project 1">
                     <div class="p-4">
                         <h3 class="text-xl font-bold mb-2 text-white">E-commerce Website</h3>
                         <p class="text-gray-300">A fully responsive online store with product listings, shopping cart functionality, and a modern UI built with Tailwind CSS.</p>
@@ -137,7 +168,7 @@
                     </div>
                 </div>
                 <div class="home-project opacity-0 transition-all translate-x-[10rem]   p-4 bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-1000">
-                    <img class="w-full h-48 object-cover" src="./imgs/Screenshot From 2025-10-01 12-11-39.png" alt="Project 2">
+                    <img class="w-full  h-40 md:h-48  object-cover" src="./imgs/Screenshot From 2025-10-01 12-11-39.png" alt="Project 2">
                     <div class="p-4">
                         <h3 class="text-xl font-bold mb-2 text-white">Youtube clone</h3>
                         <p class="text-gray-300">
@@ -148,7 +179,7 @@
                     </div>
                 </div>
                 <div class="home-project opacity-0 transition-all translate-x-[10rem]  p-4 bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-1000">
-                    <img class="w-full h-48 object-cover" src="./imgs/Screenshot From 2025-10-01 11-34-19.png" alt="Project 3">
+                    <img class="w-full  h-40 md:h-48  object-cover" src="./imgs/Screenshot From 2025-10-01 11-34-19.png" alt="Project 3">
                     <div class="p-4">
                         <h3 class="text-xl font-bold mb-2 text-white">food-ninja</h3>
                         <p class="text-gray-300"> A responsive food delivery app UI designed with HTML and Tailwind CSS for clean layouts and mobile-first design.</p>
@@ -156,7 +187,8 @@
                      <div class="w-[90%] mx-auto py-4">
                         <button class="w-full bg-[#374151] text-white py-2 rounded "  onclick="window.open('https://samdev43.github.io/food-ninja/', '_blank')">View project</button>
                     </div>
-                </div>            </div>
+                </div> 
+           </div>
         </section>
 
         <section class="bg-[#111827] ">
