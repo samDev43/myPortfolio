@@ -264,3 +264,19 @@ function displayWork(type) {
     observer.observe(card);
   });
 }
+
+function tofacebook(){
+  window.open("https://web.facebook.com/profile.php?id=61580917291967", "_blank")
+}
+function tolinkedin(){
+  window.open("https://www.linkedin.com/in/samad-sooto-1698b9312/", "_blank")
+}
+function togithub(){
+  window.open("https://github.com/samDev43", "_blank")
+}
+function toinstagram(){
+  window.open("https://www.instagram.com/cybersam242/", "_blank")
+}
+function totwitter(){
+  window.open("https://x.com/SamadSooto3696", "_blank")
+} 

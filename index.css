@@ -78,6 +78,7 @@
         }
 /* Continuous animations */
 .btn-animated {
+        background: linear-gradient(135deg, #bc73d1, #d892e3, #f0b8ff);
     position: relative;
     animation: border-pulse 2s ease-in-out infinite;
 }
@@ -127,7 +128,6 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: linear-gradient(135deg, #bc73d1, #d892e3, #f0b8ff);
     transition: width 0.4s ease;
     z-index: 0;
     border-radius: 9999px;

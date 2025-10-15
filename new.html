@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sooto Samad Olalekan - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #bc73d1 0%, #ef517f 50%, #f0b8ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-effect {
+            background: rgba(31, 41, 55, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-item {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #bc73d1, #ef517f);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-item:hover::after,
+        .nav-item.active::after {
+            width: 100%;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .btn-glow {
+            box-shadow: 0 0 20px rgba(188, 115, 209, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-glow:hover {
+            box-shadow: 0 0 30px rgba(188, 115, 209, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(135deg, rgba(55, 65, 81, 0.9) 0%, rgba(31, 41, 55, 0.9) 100%);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(188, 115, 209, 0.2);
+        }
+        
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #bc73d1, #ef517f);
+            transform: translateY(-50%);
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-effect">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center gap-3 group cursor-pointer">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform duration-300">
+                        <span class="text-white text-2xl font-black">S</span>
+                    </div>
+                    <span class="text-2xl font-bold gradient-text">Samad.dev</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex gap-8 text-lg font-medium">
+                    <li class="nav-item active"><a href="#home" class="hover:text-purple-400">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="hover:text-purple-400">About</a></li>
+                    <li class="nav-item"><a href="#projects" class="hover:text-purple-400">Projects</a></li>
+                    <li class="nav-item"><a href="#contact" class="hover:text-purple-400">Contact</a></li>
+                </ul>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white" id="mobile-menu-btn">
+                    <i class="bi bi-list text-3xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu md:hidden absolute top-full left-0 right-0 glass-effect opacity-0 transform -translate-y-4 hidden" id="mobile-menu">
+            <ul class="flex flex-col gap-4 p-6 text-lg font-medium">
+                <li class="nav-item active"><a href="#home" class="block hover:text-purple-400">Home</a></li>
+                <li class="nav-item"><a href="#about" class="block hover:text-purple-400">About</a></li>
+                <li class="nav-item"><a href="#projects" class="block hover:text-purple-400">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="block hover:text-purple-400">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="space-y-6 fade-in-up" style="animation-delay: 0.2s;">
+                    <p class="text-purple-400 text-lg font-medium">Welcome to my portfolio</p>
+                    <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+                        Hi, I'm <span class="gradient-text">Sooto Samad</span>
+                    </h1>
+                    <div class="space-y-3 text-xl text-gray-300">
+                        <p class="flex items-center gap-3">
+                            <i class="bi bi-shield-lock-fill text-purple-400"></i>
+                            <span>Cybersecurity Enthusiast</span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="bi bi-code-slash text-pink-400"></i>
+                            <span>Full-Stack Web Developer</span>
+                        </p>
+                    </div>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Crafting secure, responsive, and user-friendly digital experiences with modern web technologies and cybersecurity best practices.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <button class="btn-glow bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-3 rounded-full font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                            View Projects
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                        <button class="glass-effect px-8 py-3 rounded-full font-semibold hover:bg-gray-700 transition-all">
+                            Download CV
+                            <i class="bi bi-download ml-2"></i>
+                        </button>
+                    </div>
+                    <!-- Social Links -->
+                    <div class="flex gap-4 pt-6">
+                        <a href="#" class="w-12 h-12 glass-effect rounded-full flex items-center justify-center hover:bg-purple-500 transition-all">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 glass-effect rounded-full flex items-center justify-center hover:bg-purple-500 transition-all">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 glass-effect rounded-full flex items-center justify-center hover:bg-purple-500 transition-all">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 glass-effect rounded-full flex items-center justify-center hover:bg-purple-500 transition-all">
+                            <i class="bi bi-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Image -->
+                <div class="relative fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="floating">
+                        <img src="./imgs/Image2.png" alt="Profile" class="w-full max-w-md mx-auto rounded-2xl shadow-2xl">
+                    </div>
+                    <!-- Decorative Elements -->
+                    <div class="absolute top-0 right-0 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+                    <div class="absolute bottom-0 left-0 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 1s;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-gray-800 py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="flex items-center justify-between mb-12">
+                <h2 class="text-4xl font-bold flex items-center gap-4">
+                    <span class="gradient-text">#</span>
+                    <span>Featured Projects</span>
+                </h2>
+                <a href="#" class="text-purple-400 hover:text-purple-300 flex items-center gap-2 font-medium">
+                    View All
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="project-card rounded-xl overflow-hidden border border-gray-700">
+                    <div class="relative overflow-hidden group">
+                        <img src="./imgs/image-copy.png" alt="E-commerce" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
+                        <p class="text-gray-400 mb-4">A fully responsive online store with cart functionality and modern UI built with Tailwind CSS.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">HTML</span>
+                            <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">CSS</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">JavaScript</span>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-purple-500 to-pink-500 py-2 rounded-lg font-semibold hover:shadow-lg transition-all" onclick="window.open('https://samdev43.github.io/my-E-_commerse-project/', '_blank')">
+                            View Project
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Project Card 2 -->
+                <div class="project-card rounded-xl overflow-hidden border border-gray-700">
+                    <div class="relative overflow-hidden group">
+                        <img src="./imgs/Screenshot From 2025-10-01 12-11-39.png" alt="YouTube Clone" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">YouTube Clone</h3>
+                        <p class="text-gray-400 mb-4">A responsive video platform UI featuring clean layouts and mobile-first design principles.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">HTML</span>
+                            <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">Tailwind</span>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-purple-500 to-pink-500 py-2 rounded-lg font-semibold hover:shadow-lg transition-all" onclick="window.open('https://samdev43.github.io/Youtube-Clone/', '_blank')">
+                            View Project
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Project Card 3 -->
+                <div class="project-card rounded-xl overflow-hidden border border-gray-700">
+                    <div class="relative overflow-hidden group">
+                        <img src="./imgs/Screenshot From 2025-10-01 11-34-19.png" alt="Food Ninja" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Food Ninja</h3>
+                        <p class="text-gray-400 mb-4">A modern food delivery app UI with clean layouts and intuitive user experience design.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">HTML</span>
+                            <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">Tailwind</span>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-purple-500 to-pink-500 py-2 rounded-lg font-semibold hover:shadow-lg transition-all" onclick="window.open('https://samdev43.github.io/food-ninja/', '_blank')">
+                            View Project
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-900 py-20">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="text-gray-400 text-lg">Have a project in mind? Let's work together!</p>
+            </div>
+            
+            <div class="glass-effect rounded-2xl p-8 border border-gray-700">
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Name</label>
+                        <input type="text" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:border-purple-500 focus:outline-none transition-colors" placeholder="Your name">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Email</label>
+                        <input type="email" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:border-purple-500 focus:outline-none transition-colors" placeholder="your.email@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Message</label>
+                        <textarea rows="5" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:border-purple-500 focus:outline-none transition-colors resize-none" placeholder="Your message..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full btn-glow bg-gradient-to-r from-purple-500 to-pink-500 py-3 rounded-lg font-semibold flex items-center justify-center gap-2">
+                        Send Message
+                        <i class="bi bi-send"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-left">
+                    <p class="text-2xl font-bold gradient-text">Samad.dev</p>
+                    <p class="text-gray-400 mt-1">Building secure digital solutions</p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 glass-effect rounded-full flex items-center justify-center hover:bg-purple-500 transition-all">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 glass-effect rounded-full flex items-center justify-center hover:bg-purple-500 transition-all">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 glass-effect rounded-full flex items-center justify-center hover:bg-purple-500 transition-all">
+                        <i class="bi bi-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-6 text-gray-500 text-sm">
+                <p>&copy; 2024 Sooto Samad. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            setTimeout(() => {
+                mobileMenu.classList.toggle('active');
+            }, 10);
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.remove('active');
+                        setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+                    }
+                }
+            });
+        });
+        
+        // Active nav item on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollY = window.pageYOffset;
+            
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 100;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-item').forEach(item => {
+                        item.classList.remove('active');
+                        if (item.querySelector(`a[href="#${sectionId}"]`)) {
+                            item.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

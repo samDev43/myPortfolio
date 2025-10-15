@@ -18,7 +18,7 @@
 <body class="bg-[#111827] ">
 <div class="relative w-full h-[65%] mt-[7rem] md:mt-[0rem]">
   <!-- Left side (gray) -->
-  <div class="hidden md:block absolute inset-0 bg-gray-500 clip-left"></div>
+  <div class="hidden md:block absolute inset-0 bg-[#333c48] clip-left"></div>
 
   <!-- Right side (black) -->
   <div class="hidden md:block absolute inset-0 bg-[#111827] clip-right"></div>
@@ -26,7 +26,7 @@
   <div class="smclip-bottom  z-30 md:hidden absolute inset-0 bg-gray-600/85"></div>
 
   <nav class="bg-gray-600/85 fixed  top-0 left-0 right-0 z-50  rounded-b-lg border-b-[2px] border-white">
-    <div class="flex justify-between items-center  md:flex  lg:w-[70%] w-[100%] mx-auto px-4 rounded-b-lg  py-[2rem] ">
+    <div class="flex justify-between items-center  md:flex  lg:w-[70%] w-[100%] mx-auto px-4 rounded-b-lg  py-[1.2rem] ">
         <div class="font-bold text-3xl md:text-4xl flex items-center gap-3 group cursor-pointer">
             <div class="w-12 h-12 bg-gradient-to-br from-[#bc73d1] to-[#ef517f] rounded-xl flex items-center justify-center shadow-lg group-hover:rotate-12 transition-transform duration-300">
                 <span class="text-white text-2xl font-black">S</span>
@@ -71,13 +71,13 @@
   </nav>
   <!-- Content (goes on top) -->
   <div class="md:w-[95%] lg:w-[70%] mx-auto hidden md:flex relative z-10   md:flex-row items-center justify-between md:h-full">
-   <div class="w-[90%] md:w-[40%] text-gray-300 space-y-6 section1-txt opacity-0 translate-y-20 transition-all duration-1000 ease-in-out">
+   <div class="w-[90%] md:w-[45%] text-gray-300 space-y-6 section1-txt opacity-0 translate-y-20 transition-all duration-1000 ease-in-out">
     <p class="font-bold text-3xl md:text-4xl tracking-wide">
         <span style="font-family:'inter', serif;" class="text-gray0">Hi</span><span class="text-[#bc73d1]">,</span> 
         <span style="font-family:'Times New Roman', serif;" class="text-white neon-text-subtle">I'm</span>
     </p>
-    
-    <h1 class="text-5xl md:text-6xl lg:text-7xl font-black font-heading leading-none">
+
+    <h1 class="text-2xl md:text-5xl lg:text-6xl font-black font-heading leading-none">
         <span class="block text-white neon-text-name drop-shadow-2xl">
             Sooto Samad
         </span>
@@ -110,34 +110,32 @@
                  <h1 class="text-4xl font-bold mb-2">Sooto Samad</h1>
                  <p class="text-sm">Cybersecurity Enthusiast / Web Developer</p>
     </div>
-    <div class="flex flex-col gap-2 absolute bottom-4 right-8 z-40 text-white md:hidden text-2xl">
-        <i class="bi bi-facebook hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
-        <i class="bi bi-twitter hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
-        <i class="bi bi-linkedin hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
-        <i class="bi bi-github hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
-        <i class="bi bi-instagram hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
+    <div class="flex flex-col gap-4 absolute bottom-4 right-8 z-40 text-white md:hidden text-2xl">
+        <i onclick="tolinkedin()" class="bi bi-linkedin hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
+        <i onclick="togithub()" class="bi bi-github hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
+        <i onclick="toinstagram()" class="bi bi-instagram hover:scale-110 transition-all duration-1000 hover:translate-y-[-10px]"></i>
     </div>
 </div>
 
 
 <div class="h-[35%] bg-[#1f2937] flex justify-center items-center">
-   <div class="text-center md:w-[40%]">
-     <p class="text-white text-lg font-heading">
+   <div class="text-center md:w:[70%] lg:w-[40%]">
+     <p class=" text-lg font-heading text-[#9ca3af]">
               <span>Crafting Responsive Magic</span> 🎨 | <span>Fortifying the Web</span> 🛡️ | 
               <span>Turning Creative Ideas into Interactive Reality</span> 💡 | 
               <span>Building Beautiful & Secure Digital Experiences</span> 🌐 
               <a href=""><i class="bi bi-instagram"></i></a>
             </p>
          <div class="flex flex-col md:flex-row gap-4 text-lg font-semibold justify-center items-center md:space-x-4 w-full">
-            <button class="btn-animated py-2 px-6 w-[80%] md:w-[14rem] rounded-full mt-4 text-black bg-white relative overflow-hidden transition-all duration-300 hover:scale-110 group" 
+            <button class="btn-animated py-2 px-6 w-[80%] md:w-[14rem] rounded-full mt-4 text-white bg-white relative overflow-hidden transition-all duration-300 hover:scale-110 group" 
                 onclick="window.location.href='https://samdev43.github.io/myPortfolio/projects.html'">
                 <span class="relative z-10 flex items-center justify-center gap-2">
                 View my work
                 <i class="bi bi-arrow-right transform transition-transform duration-300 group-hover:translate-x-2"></i>
                 </span>
             </button>
-            <button class="btn-animated py-2 px-6 w-[80%] md:w-[14rem] rounded-full mt-4 text-black bg-white relative overflow-hidden transition-all duration-300 hover:scale-110 group" style="animation-delay: 0.5s;">
-                <span class="relative z-10 flex items-center justify-center gap-2">
+            <button class="btn-animate border-[1px] border-[#333c48] bg-[#1d2735] py-2 px-6 w-[80%] md:w-[14rem] rounded-full mt-4   relative overflow-hidden transition-all duration-300 hover:scale-110 group" style="animation-delay: 0.5s;">
+                <span class="relative z-10 flex items-center justify-center gap-2 text-white">
                 Hire me
                 <i class="bi bi-briefcase transform transition-transform duration-300 group-hover:rotate-12"></i>
                 </span>
@@ -231,15 +229,12 @@
             
             <div class="flex flex-col items-center gap-2">
                 <div class="flex space-x-6 text-xl">
-                    <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">
-                        <i class="bi bi-github"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">
-                        <i class="bi bi-linkedin"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">
-                        <i class="bi bi-envelope"></i>
-                    </a>
+
+                    <i onclick="tofacebook()" class="bi bi-facebook hover:scale-110 text-gray-400 hover:text-purple-400 transition-colors"></i>
+                    <i onclick="totwitter()" class="bi bi-twitter hover:scale-110 text-gray-400 hover:text-purple-400 transition-colors"></i>
+                    <i onclick="tolinkedin()" class="bi bi-linkedin hover:scale-110 text-gray-400 hover:text-purple-400 transition-colors"></i>
+                    <i onclick="togithub()" class="bi bi-github hover:scale-110 text-gray-400 hover:text-purple-400 transition-colors"></i>
+                    <i onclick="toinstagram()" class="bi bi-instagram hover:scale-110 text-gray-400 hover:text-purple-400 transition-colors"></i>
                 </div>
                 <p class="text-sm text-gray-500">&copy; 2024 All rights reserved</p>
             </div>
