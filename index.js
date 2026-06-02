@@ -30,6 +30,14 @@ let portfolioWork = [
     tech: ["HTML", "Tailwindcss"],
     liveLink: "https://samdev43.github.io/BURGER/",
     gitLink: "https://github.com/samDev43/BURGER/"
+  },
+  {
+    title: "Full blog website",
+    description: "A full-stack web app that lets users sign up, log in, and manage posts with secure authentication, CRUD features, and a responsive modern UI.",
+    img: "./imgs/post1.png",
+    tech: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "MongoDB"],
+    liveLink: "https://zoom-react-three.vercel.app/",
+    gitLink: "https://github.com/samDev43/zoom_react"
   }
 ];
 let testProjects = [
@@ -241,22 +249,46 @@ function displayWork(type) {
     `<div class="py-1 px-2 text-center rounded-full">${t}</div>`
   ).join("");
     container.insertAdjacentHTML('beforeend', `
-     <div class="home-project skill-card translate-x-[-10rem] opacity-0 transition-all duration-1000 bg-transparent border-[0.1px] border-gray-200 shadow-md hover:scale-95 transition-all duration-300">
-        <div class="w-full">
-          <img class="w-full h-[12rem] md:h-[16rem] md:h-[15rem] lg:h-[19rem]" src="${projectPage.img}" alt="">
-        </div>
-        <div class="flex gap-2 mb-2 my-2 py-2 px-2 font-bold border-b-[0.1px] border-t-[0.1px] border-gray-200 text-gray-300 flex-wrap">
-          ${techStack}
-        </div>
-        <div class="py-3 px-2 text-gray-300 flex flex-col gap-4">
-          <h2 class="text-xl font-bold mb-2">${projectPage.title}</h2>
-          <p class="text-[rgb(209,213,219)] text-lg">${projectPage.description}</p>
-          <div class="flex justify-between items-center w-full gap-4">
-            <button class="py-2 border-[0.1px] border-gray-200 w-[80%]" onclick="window.open('${projectPage.liveLink}', '_blank')">view</button>
-            <button class="py-2 w-[20%] border-[0.1px] border-gray-200" onclick="window.open('${projectPage.gitLink}', '_blank')"><i class="bi bi-github text-2xl"></i></button>
-          </div>
-        </div>
-      </div>
+<div class="home-project skill-card h-full flex flex-col justify-between translate-x-[-10rem] opacity-0 transition-all duration-1000 bg-transparent border-[0.1px] border-gray-200 shadow-md hover:scale-95">
+
+  <!-- IMAGE -->
+  <div class="w-full">
+    <img class="w-full h-[12rem] md:h-[15rem] lg:h-[19rem] object-cover" src="${projectPage.img}" alt="">
+  </div>
+
+  <!-- TECH STACK -->
+  <div class="flex gap-2 my-2 py-2 px-2 font-bold border-b-[0.1px] border-t-[0.1px] border-gray-200 text-gray-300 flex-wrap">
+    ${techStack}
+  </div>
+
+  <!-- CONTENT -->
+  <div class="py-3 px-2 text-gray-300 flex flex-col gap-4 flex-1">
+    
+    <div>
+      <h2 class="text-xl font-bold mb-2">${projectPage.title}</h2>
+      <p class="text-[rgb(209,213,219)] text-lg">
+        ${projectPage.description}
+      </p>
+    </div>
+
+    <!-- BUTTONS (always at bottom) -->
+    <div class="flex justify-between items-center w-full gap-4 mt-auto">
+
+      <button class="py-2 border-[0.1px] border-gray-200 w-[80%]" 
+        onclick="window.open('${projectPage.liveLink}', '_blank')">
+        view
+      </button>
+
+      <button class="py-2 w-[20%] border-[0.1px] border-gray-200" 
+        onclick="window.open('${projectPage.gitLink}', '_blank')">
+        <i class="bi bi-github text-2xl"></i>
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
     `);
   });
 
